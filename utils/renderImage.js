@@ -1,19 +1,11 @@
-
-
 export function renderItem(item) {
-    const li = document.createElement('li');
-    
-    const h2 = document.createElement('h2');
-    h2.textContent = item.title;
-    li.appendChild(h2);
+    const html = /*html*/`
+    <li>
+        <h2>${item.title}</h2>
+        <img src="${item.url}">
+        <p>No. of Horns: ${item.horns}</p>
+    </li>
+    `;
 
-    const img = document.createElement('img');
-    img.src = item.url;
-    li.appendChild(img);
-
-    const p = document.createElement('p');
-    p.textContent = 'No. of Horns: ' + item.horns;
-    li.appendChild(p);
-
-    return li;
+    return html;
 }
