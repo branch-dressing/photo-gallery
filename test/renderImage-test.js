@@ -7,7 +7,7 @@ const test = QUnit.test;
 
 test('renders an html string', function(assert) {
     let item = images[4];
-
+    
     let expected = /*html*/`
     <li>
         <h2>Basically a Unicorn</h2>
